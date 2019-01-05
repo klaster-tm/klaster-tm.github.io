@@ -1,0 +1,109 @@
+@media (max-width: 400px) {
+	/*Media Queries for header*/
+	.txt {
+		font-size: 40px;
+	}
+	.balls {
+		width: 60px;
+		height: 34px;
+	}
+	.ball {
+		width: 30px;
+		height: 30px;
+	}
+	@keyframes ball-slide {
+		0% {
+			margin-left: 2px;
+			background-color: rgba(255, 0, 0, 0.7);
+		}
+		25% {
+			background-color: rgba(0, 0, 255, 0.7);
+		}
+		50% {
+			margin-left: 29px;
+			background-color: rgba(0, 255, 0, 0.7);
+		}
+		75% {
+			background-color: rgba(0, 0, 255, 0.7);
+		}
+		100% {
+			margin-left: 2px;
+			background-color: rgba(255, 0, 0, 0.7);
+		}
+	}
+	.header {height: 8vh;}
+	.mb-act {top: 8vh; height: 92vh;}
+	.bars, .times {font-size: 30px;}
+	.real-content {margin-top: 30vh;}
+
+	.button-down {left: 44%;}
+}
+
+@media (max-width: 730px) {
+	.about-game-short {font-size: 20px;}
+	.button-down {left: 47%;}
+	.real-content h1 {font-size: 45px;}
+}
+@media (max-width: 590px) {
+	.about-game-short {font-size: 17px;}
+	.button-down {left: 45%;}
+	.real-content h1 {font-size: 40px;}
+}
+/*----------------------------------------------------------*/
+@media (max-width: 1080px) {
+	.fig {
+		width: 250px;
+		height: 250px;
+		font-size: 14px;
+	}
+}
+@media (max-width: 930px) {
+	.fig {
+		width: 220px;
+		height: 220px;
+	}
+}
+@media (max-width: 845px) {
+	.fig {
+		width: 200px;
+		height: 200px;
+	}
+}
+@media (max-width: 780px) {
+	.fig {
+		width: 180px;
+		height: 180px;
+	}
+}
+@media (max-width: 720px) {
+	.fig {
+		width: 170px;
+		height: 170px;
+		font-size: 13px;
+	}
+}
+@media (max-width: 687px) {
+	.cont {
+		flex-direction: column;
+		align-items: center;
+	}
+	.fig {
+		width: 50%;
+		margin: 15px;
+	}
+}
+@media (max-width: 450px) {
+	.fig {width: 85%;}
+}
+/*----------ABOUT-----------*/
+@media (max-width: 1090px) {.line {height: 120px;}}
+@media (max-width: 990px) {.line {height: 140px;}}
+@media (max-width: 800px) {.line {height: 160px;}}
+
+@media (max-width: 990px) {
+	.text-about {
+		flex-direction: column;
+		padding-bottom: 5px;
+	}
+	.line {height: 4px; width: 100px; align-self: center;}
+}

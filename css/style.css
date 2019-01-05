@@ -1,0 +1,400 @@
+* {margin: 0; padding: 0;}
+html {scroll-behavior: smooth;}
+body {font-family: sans-serif;}
+.main {
+	color: #000;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	width: 100%;
+	background-image: url(../images/n1c.png);
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	font-size: 20px;
+}
+.main .bg-c {
+	background: linear-gradient(90deg, #88d3ce, #6e45e2);
+	position: absolute;
+	left: 0; top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0.8;
+	z-index: 0;
+}
+.content {
+	z-index: 2;
+}
+
+/*-------------HEADER-------------*/
+a {
+	color: #fff;
+	text-decoration: none;
+}
+.header {
+	font-family: 'Share Tech Mono', monospace;
+	width: 100%;
+	height: 10vh;
+	background-color: rgba(0, 0, 0, 0.7);
+	display: flex;
+	top: 0;
+	position: fixed;
+	z-index: 100;
+	justify-content: space-between;
+	user-select: none;
+}
+/*\chOOse Animation/*/
+.wrap {
+	align-items: center;
+	display: flex;
+	justify-content: flex-start;
+	user-select: none;
+}
+.txt {
+	margin-left: 10px;
+	display: flex;
+	font-size: 50px;
+}
+.txt p:first-child span {
+	padding-right: 5px;
+}
+.txt p:last-child span {
+	padding-left: 5px;
+}
+.balls {
+	width: 80px;
+	height: 44px;
+	background-color: #fff;
+	border-radius: 50px;
+	margin-top: 5px;
+}
+.ball {
+	width: 40px;
+	height: 40px;
+	background-color: rgba(0, 255, 0, 0.8);
+	border-radius: 50%;
+	margin: 2px;
+	animation: ball-slide 4s ease-in infinite;
+}
+@keyframes ball-slide {
+	0% {
+		margin-left: 2px;
+		background-color: rgba(255, 0, 0, 0.7);
+	}
+	25% {
+		background-color: rgba(0, 0, 255, 0.7);
+	}
+	50% {
+		margin-left: 37px;
+		background-color: rgba(0, 255, 0, 0.7);
+	}
+	75% {
+		background-color: rgba(0, 0, 255, 0.7);
+	}
+	100% {
+		margin-left: 2px;
+		background-color: rgba(255, 0, 0, 0.7);
+	}
+}
+/*/chOOse Animation\*/
+.menu {
+	display: flex;
+}
+.menu .pc {
+	display: flex;
+	flex-direction: row;
+}
+.menu .pc li {
+	text-transform: uppercase;
+	list-style: none;
+	padding: 0 15px 0 15px;
+	font-size: 20px;
+	letter-spacing: 0.5px;
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+.menu .pc li:hover {
+	border-bottom: 2px solid #fff;
+}
+.now-is-here {
+	border-bottom: 2px solid #fff;
+}
+/*Mobile Menu*/
+.mb {
+  display: none;
+}
+.mb-act {
+	display: flex;
+	text-transform: uppercase;
+	justify-content: center;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	right: 0;
+	top: 10vh;
+	background-color: rgba(0, 0, 0, 0.8);
+	animation: mb-act 0.3s;
+}
+@keyframes mb-act {
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
+.mb-act ul {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
+	justify-content: space-around;
+}
+.mb-act li {
+	list-style: none;
+	font-size: 25px;
+}
+.choosed-part-mb {
+	border-bottom: 2px solid;
+}
+.mb-act ul li a:hover {border-bottom: 2px solid;}
+/*---------*/
+.bars, .times
+{
+	cursor: pointer;
+	font-size: 30px;
+	padding: 20px;
+	display: none;
+	align-items: center;
+	color: #fff;
+}
+
+/*media for menu*/
+@media (max-width: 530px) {
+	.menu .pc {display: none;}
+	.bars {display: flex;}
+}
+@media (min-width: 529px) {
+	.bars {display: none;}
+}
+/*-------Up Button--------*/
+#go-top {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	cursor: pointer;
+	transition: 0.3s;
+	font-size: 30px;
+	z-index: 100;
+}
+#go-top i {
+	padding: 12px 14px;
+	margin: 10px;
+	background-color: rgba(0, 0, 0, 0.5);
+	border-radius: 50%;
+	color: #fff;
+	transition: 0.3s;
+}
+#go-top i:hover {background-color: rgba(0, 0, 0, 0.6);}
+/*-----------Main Content-----------*/
+.real-content {
+	margin-top: 30vh;
+	z-index: 1;
+	display: flex;
+	justify-content: center;
+}
+.real-content h1 {
+	text-transform: uppercase;
+	font-family: 'Share Tech Mono', monospace;
+	color: #fff;
+	font-size: 50px;
+	padding: 10px;
+	background-color: rgba(0, 0, 0, 0.3);
+	border-radius: 50px;
+}
+.about-game-short {
+	color: #fff;
+	padding: 10px;
+	z-index: 1;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+	font-size: 25px;
+}
+.about-game-short::selection { background-color: red; }
+.padding {
+	padding: 18px 0;
+}
+/*---Button Down---*/
+.button-down {
+	z-index: 1;
+	position: absolute;
+	bottom: 20px;
+	left: 48.3%;
+	font-size: 30px;
+}
+.button-down a {
+	padding: 10px 12px 8px 12px;
+	background-color: rgba(0, 0, 0, 0.5);
+	border-radius: 50%;
+	color: #fff;
+	animation: pulse 1.5s infinite;
+}
+.button-down a:hover {
+	animation: none;
+	background-color: rgba(0, 0, 0, 0.6);
+}
+@keyframes pulse {
+	0% {opacity: 1;}
+	50% {opacity: 0.5;}
+	100% {opacity: 1;}
+}
+/*--------------------------ABOUT---------------------------*/
+.about {
+	min-height: 100vh;
+	width: 100%;
+	background-image: url(../images/n2.png);
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	z-index: 1;
+}
+.bg-c2 {
+	background: linear-gradient(90deg, #88d3ce, #6e45e2);
+	position: absolute;
+	left: 0; top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0.8;
+	z-index: 0;
+}
+.content2 {
+	margin-top: 10vh;
+	display: flex;
+}
+.text {
+	padding: 12vh 30px 30px 30px;
+	z-index: 1;
+	display: flex;
+	flex-direction: column;
+}
+.text h2 {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-transform: uppercase;
+	font-family: 'Share Tech Mono', monospace;
+	color: #fff;
+	font-size: 30px;
+}
+.text p {
+	padding: 20px 5%;
+	color: #fff;
+	font-size: 20px;
+	text-align: justify;
+}
+.text-about {
+	padding: 20px 1%;
+	display: flex;
+	flex-direction: row;
+}
+.line {
+	margin-top: 20px;
+	height: 100px;
+	width: 5px;
+	background-color: #fff;
+	border-radius: 50px;
+}
+/*----------------------------------------------------*/
+.cont {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.fig {
+  border-radius: 10px;
+  width: 300px;
+  height: 300px;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  padding: 15px;
+}
+.fig h2 {
+  font-family: 'Share Tech Mono', monospace;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: 0.3s;
+  transform: translateY(50px);
+}
+.fig p {
+  user-select: none;
+  transition: 0.3s;
+  transform: translateY(-25px);
+  line-height: 1.5em;
+  opacity: 0;
+  padding: 0 5px;
+}
+.fig:before {
+  content: '';
+  position: absolute;
+  top: 5%; bottom: 5%;
+  right: 5%; left: 5%;
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  transition: 0.3s;
+  transform: scaleX(0);
+}
+.fig:hover:before {
+  transform: scaleX(1);
+}
+.fig:after {
+  content: '';
+  position: absolute;
+  top: 5%; bottom: 5%;
+  right: 5%; left: 5%;
+  border-right: 2px solid #fff;
+  border-left: 2px solid #fff;
+  transition: 0.3s;
+  transform: scaleY(0);
+}
+.fig:hover:after {
+  transform: scaleY(1);
+}
+.fig:hover h2,
+.fig:hover p
+{
+  transform: translateY(0);
+  opacity: 1;
+}
+.fig-c {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.n1 {background-color: rgb(25, 127, 229);}
+.n2 {background-color: rgb(229, 69, 69);}
+.n3 {background-color: rgb(86, 193, 86);}
+.n1:hover {background-color: rgb(18, 89, 161);}
+.n2:hover {background-color: rgb(179, 25, 25);}
+.n3:hover {background-color: rgb(55, 149, 55);}
+.click-me-plz {
+	margin: 10px;
+	padding: 5px;
+	font-size: 30px;
+	animation: click-plz 1s infinite ease;
+	opacity: 0.9;
+}
+@keyframes click-plz {
+	0% {opacity: 0.5;}
+	50% {opacity: 0.9;}
+	100% {opacity: 0.5;}
+}
+.fig:hover .click-me-plz {display: none;}

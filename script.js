@@ -9,6 +9,7 @@ $(document).ready(function() {
 		$(".real-content").css("z-index", "-1");
 		$(".about-game-short").css("z-index", "-1");
 		$(".button-down").css("z-index", "-1");
+		//---------------
 	})
 
 	$(".times").on("click", function () {
@@ -40,5 +41,4 @@ $(document).ready(function() {
 	$(function() {
 		$("#go-top").scrollToTop();
 	})
-//
 });

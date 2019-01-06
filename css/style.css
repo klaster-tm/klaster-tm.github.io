@@ -2,7 +2,7 @@
 html {scroll-behavior: smooth;}
 body {
 	font-family: sans-serif;
-	background-image: url(../images/body-bg.png);
+	background-image: url(../images/body-bg-min.png);
 	background-position: center;
 	background-size: cover;
 }

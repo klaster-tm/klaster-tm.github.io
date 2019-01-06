@@ -11,6 +11,26 @@
 		width: 30px;
 		height: 30px;
 	}
+	@-webkit-keyframes ball-slide {
+		0% {
+			margin-left: 2px;
+			background-color: rgba(255, 0, 0, 0.7);
+		}
+		25% {
+			background-color: rgba(0, 0, 255, 0.7);
+		}
+		50% {
+			margin-left: 29px;
+			background-color: rgba(0, 255, 0, 0.7);
+		}
+		75% {
+			background-color: rgba(0, 0, 255, 0.7);
+		}
+		100% {
+			margin-left: 2px;
+			background-color: rgba(255, 0, 0, 0.7);
+		}
+	}
 	@keyframes ball-slide {
 		0% {
 			margin-left: 2px;
@@ -84,8 +104,13 @@
 }
 @media (max-width: 687px) {
 	.cont {
-		flex-direction: column;
-		align-items: center;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
 	}
 	.fig {
 		width: 50%;
@@ -102,8 +127,21 @@
 
 @media (max-width: 990px) {
 	.text-about {
-		flex-direction: column;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
 		padding-bottom: 5px;
 	}
-	.line {height: 4px; width: 100px; align-self: center;}
+	.line {height: 4px; width: 100px; -ms-flex-item-align: center; -ms-grid-row-align: center; align-self: center;}
+}
+/*-------------------*/
+@media (max-width: 560px) {
+	.footer {font-size: 12px;}
+}
+@media (max-width: 390px) {
+	.footer {font-size: 11px}
+}
+@media (max-width: 360px) {
+	.footer-menu {display: none;}
 }

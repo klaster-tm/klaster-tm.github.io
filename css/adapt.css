@@ -145,3 +145,7 @@
 @media (max-width: 360px) {
 	.footer-menu {display: none;}
 }
+/*-----------------------------------------------------------*/
+@media (max-height: 500px) {
+	.header {height: 45px;}
+}

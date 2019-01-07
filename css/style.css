@@ -321,7 +321,7 @@ a {
 .button-down {
 	z-index: 1;
 	position: absolute;
-	bottom: 20px;
+	bottom: 10%;
 	left: 48.3%;
 	font-size: 30px;
 }
